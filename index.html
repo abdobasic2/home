@@ -466,11 +466,11 @@
                             <div id="step1" class="form-step active">
                                 <h3 class="text-lg sm:text-xl font-bold brand-blue mb-6 text-center">أهلاً بك! لنبدأ، هل أنت فرد أم ممثل شركة؟</h3>
                                 <div class="grid grid-cols-2 gap-4">
-                                    <div class="form-choice-card p-4 sm:p-6 rounded-lg text-center cursor-pointer" onclick="selectChoice('customerType', 'individual', event)">
+                                    <div data-key="customerType" data-value="individual" class="form-choice-card p-4 sm:p-6 rounded-lg text-center cursor-pointer">
                                         <div class="text-3xl sm:text-4xl mb-2">👤</div>
                                         <p class="font-bold text-sm sm:text-base">فرد</p>
                                     </div>
-                                    <div class="form-choice-card p-4 sm:p-6 rounded-lg text-center cursor-pointer" onclick="selectChoice('customerType', 'company', event)">
+                                    <div data-key="customerType" data-value="company" class="form-choice-card p-4 sm:p-6 rounded-lg text-center cursor-pointer">
                                          <div class="text-3xl sm:text-4xl mb-2">🏢</div>
                                         <p class="font-bold text-sm sm:text-base">شركة</p>
                                     </div>
@@ -481,16 +481,13 @@
                             <div id="step2" class="form-step">
                                 <h3 class="text-lg sm:text-xl font-bold brand-blue mb-6 text-center">ممتاز! ما هي الخدمة التي تهتم بها بشكل أساسي؟</h3>
                                 <div class="space-y-4">
-                                    <div class="form-choice-card p-4 rounded-lg cursor-pointer flex items-center" onclick="selectChoice('serviceType', 'tracking', event)">
-                                        <input type="radio" name="service" class="hidden">
+                                    <div data-key="serviceType" data-value="tracking" class="form-choice-card p-4 rounded-lg cursor-pointer flex items-center">
                                         <p class="font-bold text-sm sm:text-base">تتبع وحماية المركبات</p>
                                     </div>
-                                    <div class="form-choice-card p-4 rounded-lg cursor-pointer flex items-center" onclick="selectChoice('serviceType', 'dashcam', event)">
-                                        <input type="radio" name="service" class="hidden">
+                                    <div data-key="serviceType" data-value="dashcam" class="form-choice-card p-4 rounded-lg cursor-pointer flex items-center">
                                         <p class="font-bold text-sm sm:text-base">داش كام ذكي</p>
                                     </div>
-                                     <div class="form-choice-card p-4 rounded-lg cursor-pointer flex items-center" onclick="selectChoice('serviceType', 'both', event)">
-                                        <input type="radio" name="service" class="hidden">
+                                     <div data-key="serviceType" data-value="both" class="form-choice-card p-4 rounded-lg cursor-pointer flex items-center">
                                         <p class="font-bold text-sm sm:text-base">كلاهما معاً</p>
                                     </div>
                                 </div>
@@ -501,9 +498,9 @@
                             <div id="step3" class="form-step">
                                <h3 class="text-lg sm:text-xl font-bold brand-blue mb-6 text-center">كم عدد المركبات في أسطولكم؟</h3>
                                <div class="space-y-4">
-                                     <div class="form-choice-card p-4 rounded-lg cursor-pointer text-sm sm:text-base" onclick="selectChoice('fleetSize', '1-10', event)"><p>1 - 10 مركبات</p></div>
-                                     <div class="form-choice-card p-4 rounded-lg cursor-pointer text-sm sm:text-base" onclick="selectChoice('fleetSize', '11-50', event)"><p>11 - 50 مركبة</p></div>
-                                     <div class="form-choice-card p-4 rounded-lg cursor-pointer text-sm sm:text-base" onclick="selectChoice('fleetSize', '50+', event)"><p>أكثر من 50 مركبة</p></div>
+                                     <div data-key="fleetSize" data-value="1-10" class="form-choice-card p-4 rounded-lg cursor-pointer text-sm sm:text-base"><p>1 - 10 مركبات</p></div>
+                                     <div data-key="fleetSize" data-value="11-50" class="form-choice-card p-4 rounded-lg cursor-pointer text-sm sm:text-base"><p>11 - 50 مركبة</p></div>
+                                     <div data-key="fleetSize" data-value="50+" class="form-choice-card p-4 rounded-lg cursor-pointer text-sm sm:text-base"><p>أكثر من 50 مركبة</p></div>
                                 </div>
                                 <button type="button" class="mt-6 text-gray-600 text-sm" onclick="prevStep()">&rarr; رجوع</button>
                             </div>
@@ -621,74 +618,84 @@
         });
 
         // Multi-step Form
-        const steps = ['step1', 'step2', 'step3', 'step4'];
-        let currentStep = 0;
-        const formData = {};
+        document.addEventListener('DOMContentLoaded', function() {
+            const steps = ['step1', 'step2', 'step3', 'step4'];
+            let currentStep = 0;
+            const formData = {};
 
-        function showStep(stepIndex) {
-            document.querySelectorAll('.form-step').forEach(step => step.classList.remove('active'));
-            document.getElementById(steps[stepIndex]).classList.add('active');
-            updateProgressBar();
-        }
-
-        function nextStep() {
-            if (currentStep < steps.length - 1) {
-                // Skip fleet size step if customer is individual
-                if (currentStep === 1 && formData.customerType === 'individual') {
-                     currentStep += 2;
-                } else {
-                     currentStep++;
+            function showStep(stepIndex) {
+                document.querySelectorAll('.form-step').forEach(step => step.classList.remove('active'));
+                const currentStepElement = document.getElementById(steps[stepIndex]);
+                if (currentStepElement) {
+                   currentStepElement.classList.add('active');
                 }
-                showStep(currentStep);
+                updateProgressBar();
             }
-        }
-        
-        function prevStep() {
-            if (currentStep > 0) {
-                 // Skip fleet size step if customer is individual
-                 if (currentStep === 3 && formData.customerType === 'individual') {
-                    currentStep -= 2;
-                 } else {
-                    currentStep--;
-                 }
-                showStep(currentStep);
-            }
-        }
 
-        function selectChoice(key, value, event) {
-            formData[key] = value;
+            function nextStep() {
+                if (currentStep < steps.length - 1) {
+                    if (currentStep === 1 && formData.customerType === 'individual') {
+                        currentStep += 2;
+                    } else {
+                        currentStep++;
+                    }
+                    showStep(currentStep);
+                }
+            }
             
-            // Highlight selection
-            const choices = document.querySelectorAll(`[onclick*="${key}"]`);
-            choices.forEach(c => c.classList.remove('selected'));
-            event.currentTarget.classList.add('selected');
-
-            setTimeout(() => {
-                nextStep();
-            }, 300);
-        }
-        
-        function updateProgressBar() {
-            let totalSteps = (formData.customerType === 'company') ? 4 : 3;
-            let currentProgressStep = currentStep;
-            if (formData.customerType === 'individual' && currentStep > 1) {
-                currentProgressStep = currentStep - 1;
+            window.prevStep = function() {
+                if (currentStep > 0) {
+                    if (currentStep === 3 && formData.customerType === 'individual') {
+                        currentStep -= 2;
+                    } else {
+                        currentStep--;
+                    }
+                    showStep(currentStep);
+                }
             }
-            const progress = (currentProgressStep / (totalSteps - 1)) * 100;
-            document.getElementById('progressBar').style.width = `${progress}%`;
-        }
 
-        document.getElementById('multiStepForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            formData.name = document.getElementById('name').value;
-            formData.phone = document.getElementById('phone').value;
-            console.log('Final Form Data:', formData);
-            alert('شكراً لك! تم إرسال طلبك بنجاح.');
-            // Here you would typically send the formData to your server
+            function selectChoice(key, value, element) {
+                formData[key] = value;
+                
+                const choices = document.querySelectorAll(`[data-key="${key}"]`);
+                choices.forEach(c => c.classList.remove('selected'));
+                element.classList.add('selected');
+
+                setTimeout(() => {
+                    nextStep();
+                }, 300);
+            }
+            
+            function updateProgressBar() {
+                let totalSteps = (formData.customerType === 'company') ? 4 : 3;
+                let currentProgressStep = currentStep;
+                if (formData.customerType === 'individual' && currentStep > 1) {
+                    currentProgressStep = currentStep - 1;
+                }
+                const progress = (currentProgressStep / (totalSteps - 1)) * 100;
+                document.getElementById('progressBar').style.width = `${progress}%`;
+            }
+
+            document.querySelectorAll('.form-choice-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    const key = this.dataset.key;
+                    const value = this.dataset.value;
+                    selectChoice(key, value, this);
+                });
+            });
+
+            document.getElementById('multiStepForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                formData.name = document.getElementById('name').value;
+                formData.phone = document.getElementById('phone').value;
+                console.log('Final Form Data:', formData);
+                alert('شكراً لك! تم إرسال طلبك بنجاح.');
+                // Here you would typically send the formData to your server
+            });
+
+            // Initialize first step
+            showStep(0);
         });
-
-        // Initialize first step
-        showStep(0);
 
     </script>
 
