@@ -290,11 +290,11 @@
             <p class="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto mb-10">نستخدم فقط أجهزة تتبع أوروبية الصنع وعالية الجودة لضمان دقة لا تضاهى في تحديد المواقع واستمرارية في الخدمة يمكنك الاعتماد عليها.</p>
             <div class="swiper-container devices-slider">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/images/30b925b64c015b6d.jpeg" alt="جهاز تتبع GPS موديل 1" class="h-40 sm:h-48 rounded-lg shadow-lg"></div>
-                    <div class="swiper-slide"><img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/images/d3de4063223f66a9.jpeg" alt="جهاز تتبع GPS موديل 2" class="h-40 sm:h-48 rounded-lg shadow-lg"></div>
-                    <div class="swiper-slide"><img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/images/62153b6f0e3f7c46.jpeg" alt="جهاز تتبع GPS موديل 3" class="h-40 sm:h-48 rounded-lg shadow-lg"></div>
-                    <div class="swiper-slide"><img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/images/30b925b64c015b6d.jpeg" alt="جهاز تتبع GPS موديل 4" class="h-40 sm:h-48 rounded-lg shadow-lg"></div>
-                    <div class="swiper-slide"><img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/images/d3de4063223f66a9.jpeg" alt="جهاز تتبع GPS موديل 5" class="h-40 sm:h-48 rounded-lg shadow-lg"></div>
+                    <div class="swiper-slide"><img src="https://teltonika-gps.com/cdn/extras/22514/fmc130-side-840xAuto.webp" alt="جهاز تتبع FMC130" class="h-40 sm:h-48 rounded-lg object-contain"></div>
+                    <div class="swiper-slide"><img src="https://teltonika-gps.com/cdn/extras/25439/fmc920-side-840xAuto.webp" alt="جهاز تتبع FMC920" class="h-40 sm:h-48 rounded-lg object-contain"></div>
+                    <div class="swiper-slide"><img src="https://teltonika-gps.com/cdn/extras/22504/fmb001-side-840xAuto.webp" alt="جهاز تتبع FMB001" class="h-40 sm:h-48 rounded-lg object-contain"></div>
+                    <div class="swiper-slide"><img src="https://teltonika-gps.com/cdn/extras/22602/tat100-side-840xAuto.webp" alt="جهاز تتبع TAT100" class="h-40 sm:h-48 rounded-lg object-contain"></div>
+                    <div class="swiper-slide"><img src="https://hwdb-api.gurtam.com/images/15178975/2.51.png" alt="جهاز تتبع Galileosky" class="h-40 sm:h-48 rounded-lg object-contain"></div>
                 </div>
                  <div class="swiper-pagination mt-8"></div>
             </div>
@@ -491,7 +491,7 @@
                                         <p class="font-bold text-sm sm:text-base">كلاهما معاً</p>
                                     </div>
                                 </div>
-                                 <button type="button" class="mt-6 text-gray-600 text-sm" onclick="prevStep()"> &rarr; رجوع</button>
+                                 <button type="button" class="mt-6 text-gray-600 text-sm back-button"> &rarr; رجوع</button>
                             </div>
 
                             <!-- Step 3: Fleet Size (Conditional) -->
@@ -502,7 +502,7 @@
                                      <div data-key="fleetSize" data-value="11-50" class="form-choice-card p-4 rounded-lg cursor-pointer text-sm sm:text-base"><p>11 - 50 مركبة</p></div>
                                      <div data-key="fleetSize" data-value="50+" class="form-choice-card p-4 rounded-lg cursor-pointer text-sm sm:text-base"><p>أكثر من 50 مركبة</p></div>
                                 </div>
-                                <button type="button" class="mt-6 text-gray-600 text-sm" onclick="prevStep()">&rarr; رجوع</button>
+                                <button type="button" class="mt-6 text-gray-600 text-sm back-button">&rarr; رجوع</button>
                             </div>
 
                             <!-- Step 4: Contact Info -->
@@ -519,7 +519,7 @@
                                     </div>
                                 </div>
                                 <div class="flex items-center justify-between mt-8">
-                                     <button type="button" class="text-gray-600 text-sm" onclick="prevStep()">&rarr; رجوع</button>
+                                     <button type="button" class="text-gray-600 text-sm back-button">&rarr; رجوع</button>
                                      <button type="submit" class="text-white bg-brand-blue hover:bg-opacity-90 focus:ring-4 focus:outline-none focus:ring-blue-300 font-bold rounded-lg text-base px-6 sm:px-8 py-3 text-center">احجز استشارتك</button>
                                 </div>
                             </div>
@@ -643,7 +643,7 @@
                 }
             }
             
-            window.prevStep = function() {
+            function prevStep() {
                 if (currentStep > 0) {
                     if (currentStep === 3 && formData.customerType === 'individual') {
                         currentStep -= 2;
@@ -675,6 +675,10 @@
                 const progress = (currentProgressStep / (totalSteps - 1)) * 100;
                 document.getElementById('progressBar').style.width = `${progress}%`;
             }
+            
+            document.querySelectorAll('.back-button').forEach(button => {
+                button.addEventListener('click', prevStep);
+            });
 
             document.querySelectorAll('.form-choice-card').forEach(card => {
                 card.addEventListener('click', function() {
