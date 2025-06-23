@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <!-- Chosen Palette: Tawasol Brand Palette (Blue, Gold, Green, White) -->
-    <!-- Application Structure Plan: A complete, single-page landing page designed for conversion. The structure follows a logical flow: 1) Hero section. 2) Social Proof (accreditations slider). 3) Full Solution Intro. 4) Core benefits. 5) Service tabs. 6) Product sections (Trial, Dashcam, Devices Slider). 7) About/Branches. 8) Social Proof (Testimonials Slider, Clients Slider). 9) Final Value Proposition. 10) A final, highly-interactive multi-step contact form. This comprehensive structure guides the user seamlessly through the entire funnel. -->
-    <!-- Visualization & Content Choices: Accreditations, Devices, Testimonials -> Goal: Build Trust & Showcase -> Viz: Autoplaying logo/card sliders (Swiper.js). Interaction: Continuous loop. Justification: Dynamically showcases all partners/products/reviews without taking up excessive vertical space, keeping the page engaging. || Contact Form -> Goal: Convert & Qualify -> Viz: Interactive Multi-Step Form. Interaction: User clicks through visually distinct steps with conditional logic. Justification: Reduces form friction and improves lead quality. -->
+    <!-- Application Structure Plan: A complete, single-page landing page designed for conversion. The structure follows a logical flow: 1) Hero section. 2) Social Proof (accreditations slider). 3) Full Solution Intro. 4) Core benefits. 5) Service tabs. 6) Product sections (Trial, Dashcam, Devices Slider). 7) About/Branches. 8) Social Proof (Testimonials Slider, Clients Slider). 9) Final Value Proposition. 10) A final, highly-interactive multi-step contact form. This comprehensive structure is now fully responsive for mobile devices. -->
+    <!-- Visualization & Content Choices: Accreditations, Devices, Testimonials -> Goal: Build Trust & Showcase -> Viz: Autoplaying logo/card sliders (Swiper.js) with mobile-first breakpoints. Interaction: Continuous loop. Justification: Dynamically showcases all partners/products/reviews without taking up excessive vertical space, keeping the page engaging on all screen sizes. || Contact Form -> Goal: Convert & Qualify -> Viz: Interactive Multi-Step Form. Interaction: User clicks through visually distinct steps with conditional logic. Justification: Reduces form friction and improves lead quality on both desktop and mobile. -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <style>
         body {
@@ -41,8 +41,8 @@
         }
         .whatsapp-container {
             position: fixed;
-            bottom: 25px;
-            left: 25px;
+            bottom: 20px;
+            left: 20px;
             z-index: 1000;
             display: flex;
             align-items: center;
@@ -50,8 +50,8 @@
         .whatsapp-button {
             background-color: #25D366;
             color: white;
-            width: 64px;
-            height: 64px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -117,141 +117,141 @@
 
     <!-- Header -->
     <header class="bg-white shadow-md sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold brand-blue">
+        <nav class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+            <h1 class="text-xl sm:text-2xl font-bold brand-blue">
                 تواصل الرياض
             </h1>
-            <a href="#contact-form" class="bg-brand-blue text-white font-bold py-2 px-6 rounded-lg hover:bg-opacity-90 transition-colors">
+            <a href="#contact-form" class="bg-brand-blue text-white font-bold py-2 px-4 sm:px-6 rounded-lg hover:bg-opacity-90 transition-colors text-sm sm:text-base">
                 احجز استشارتك
             </a>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-section text-white text-center py-20 md:py-32">
-        <div class="container mx-auto px-6">
+    <section class="hero-section text-white text-center py-20 md:py-28">
+        <div class="container mx-auto px-4 sm:px-6">
             <h1 class="text-4xl md:text-6xl font-extrabold mb-4 animate__animated animate__fadeInDown">تحكم. تتبع. اطمئن.</h1>
-            <h2 class="text-xl md:text-2xl mb-8 animate__animated animate__fadeInUp">أفضل نظام تتبع سيارات في السعودية</h2>
-            <p class="max-w-2xl mx-auto mb-10 animate__animated animate__fadeInUp animate__delay-1s">تحكّم في مركبتك وتتبعها لحظة بلحظة مع الحلول الذكية من تواصل الرياض المعتمدة من هيئة النقل.</p>
-            <a href="#contact-form" class="bg-amber-500 text-brand-blue font-bold py-4 px-10 text-lg rounded-lg hover:bg-amber-400 transition-colors transform hover:scale-105 animate__animated animate__pulse animate__delay-2s animate__infinite">
+            <h2 class="text-lg md:text-2xl mb-8 animate__animated animate__fadeInUp">أفضل نظام تتبع سيارات في السعودية</h2>
+            <p class="max-w-2xl mx-auto mb-10 text-base md:text-lg animate__animated animate__fadeInUp animate__delay-1s">تحكّم في مركبتك وتتبعها لحظة بلحظة مع الحلول الذكية من تواصل الرياض المعتمدة من هيئة النقل.</p>
+            <a href="#contact-form" class="bg-amber-500 text-brand-blue font-bold py-3 px-8 md:py-4 md:px-10 text-base md:text-lg rounded-lg hover:bg-amber-400 transition-colors transform hover:scale-105 animate__animated animate__pulse animate__delay-2s animate__infinite">
                 أحصل على جهاز تتبع مجاناً
             </a>
         </div>
     </section>
 
     <!-- Accreditations Section -->
-    <section class="py-12 bg-gray-100">
-        <div class="container mx-auto px-6">
-            <h3 class="text-center text-2xl font-bold text-gray-500 mb-8">معتمدون من قبل الجهات الرسمية</h3>
+    <section class="py-12 bg-gray-100 overflow-hidden">
+        <div class="container mx-auto px-4 sm:px-6">
+            <h3 class="text-center text-xl sm:text-2xl font-bold text-gray-500 mb-8">معتمدون من قبل الجهات الرسمية</h3>
             <div class="swiper-container logo-slider">
                 <div class="swiper-wrapper">
                     <!-- IMPORTANT: Replace these placeholder images with the official logos -->
-                    <div class="swiper-slide"><img src="https://placehold.co/150x80/FFFFFF/000000?text=هيئة+النقل" alt="شعار هيئة النقل العام" class="mx-auto h-16 grayscale hover:grayscale-0 transition-all duration-300"></div>
-                    <div class="swiper-slide"><img src="https://placehold.co/150x80/FFFFFF/000000?text=هيئة+الاتصالات" alt="شعار هيئة الاتصالات وتقنية المعلومات" class="mx-auto h-16 grayscale hover:grayscale-0 transition-all duration-300"></div>
-                    <div class="swiper-slide"><img src="https://placehold.co/150x80/FFFFFF/000000?text=منصة+وصل" alt="شعار منصة وصل" class="mx-auto h-16 grayscale hover:grayscale-0 transition-all duration-300"></div>
-                    <div class="swiper-slide"><img src="https://placehold.co/150x80/FFFFFF/000000?text=أمانة+جدة" alt="شعار أمانة جدة" class="mx-auto h-16 grayscale hover:grayscale-0 transition-all duration-300"></div>
-                    <div class="swiper-slide"><img src="https://placehold.co/150x80/FFFFFF/000000?text=وزارة+الشؤون+البلدية" alt="شعار وزارة الشؤون البلدية والقروية" class="mx-auto h-16 grayscale hover:grayscale-0 transition-all duration-300"></div>
-                    <div class="swiper-slide"><img src="https://placehold.co/150x80/FFFFFF/000000?text=النقابة+العامة+للسيارات" alt="شعار النقابة العامة للسيارات" class="mx-auto h-16 grayscale hover:grayscale-0 transition-all duration-300"></div>
-                     <div class="swiper-slide"><img src="https://placehold.co/150x80/FFFFFF/000000?text=هيئة+الغذاء+والدواء" alt="شعار هيئة الغذاء والدواء" class="mx-auto h-16 grayscale hover:grayscale-0 transition-all duration-300"></div>
+                    <div class="swiper-slide"><img src="https://placehold.co/150x80/FFFFFF/000000?text=هيئة+النقل" alt="شعار هيئة النقل العام" class="mx-auto h-12 sm:h-16 grayscale hover:grayscale-0 transition-all duration-300"></div>
+                    <div class="swiper-slide"><img src="https://placehold.co/150x80/FFFFFF/000000?text=هيئة+الاتصالات" alt="شعار هيئة الاتصالات وتقنية المعلومات" class="mx-auto h-12 sm:h-16 grayscale hover:grayscale-0 transition-all duration-300"></div>
+                    <div class="swiper-slide"><img src="https://placehold.co/150x80/FFFFFF/000000?text=منصة+وصل" alt="شعار منصة وصل" class="mx-auto h-12 sm:h-16 grayscale hover:grayscale-0 transition-all duration-300"></div>
+                    <div class="swiper-slide"><img src="https://placehold.co/150x80/FFFFFF/000000?text=أمانة+جدة" alt="شعار أمانة جدة" class="mx-auto h-12 sm:h-16 grayscale hover:grayscale-0 transition-all duration-300"></div>
+                    <div class="swiper-slide"><img src="https://placehold.co/150x80/FFFFFF/000000?text=وزارة+الشؤون+البلدية" alt="شعار وزارة الشؤون البلدية والقروية" class="mx-auto h-12 sm:h-16 grayscale hover:grayscale-0 transition-all duration-300"></div>
+                    <div class="swiper-slide"><img src="https://placehold.co/150x80/FFFFFF/000000?text=النقابة+العامة+للسيارات" alt="شعار النقابة العامة للسيارات" class="mx-auto h-12 sm:h-16 grayscale hover:grayscale-0 transition-all duration-300"></div>
+                     <div class="swiper-slide"><img src="https://placehold.co/150x80/FFFFFF/000000?text=هيئة+الغذاء+والدواء" alt="شعار هيئة الغذاء والدواء" class="mx-auto h-12 sm:h-16 grayscale hover:grayscale-0 transition-all duration-300"></div>
                 </div>
             </div>
         </div>
     </section>
     
     <!-- Full Solution Section -->
-    <section class="py-20">
-        <div class="container mx-auto px-6 text-center">
-             <h2 class="text-4xl font-extrabold brand-blue mb-4">الحل الكامل لتتبع السيارات</h2>
-             <p class="text-lg text-gray-700 max-w-4xl mx-auto">
+    <section class="py-16 sm:py-20">
+        <div class="container mx-auto px-4 sm:px-6 text-center">
+             <h2 class="text-3xl sm:text-4xl font-extrabold brand-blue mb-4">الحل الكامل لتتبع السيارات</h2>
+             <p class="text-base sm:text-lg text-gray-700 max-w-4xl mx-auto">
                 نقدم في تواصل الرياض أفضل نظام تتبع سيارات في السعودية، مصمم لمساعدتك على توفير الوقت والمال. سواء كنت تحتاج إلى جهاز تتبع GPS لسيارتك الشخصية أو نظام إدارة أسطول شامل لشركتك، فإن منصتنا تمنحك التحكم الكامل من أي مكان وفي أي وقت. نضمن لك كشركة رائدة ومعتمدة في المملكة جودة خدمة لا مثيل لها.
             </p>
         </div>
     </section>
 
     <!-- Why Choose Us Section -->
-    <section class="pb-20">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-extrabold brand-blue mb-4">لماذا تختار نظام تواصل الرياض؟</h2>
-                <p class="text-lg text-gray-600 max-w-3xl mx-auto">نقدم لك نظاماً متكاملاً يمنحك راحة البال، ويوفر لك المال، ويضمن لك الامتثال الكامل للوائح الرسمية.</p>
+    <section class="pb-16 sm:pb-20">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl font-extrabold brand-blue mb-4">لماذا تختار نظام تواصل الرياض؟</h2>
+                <p class="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">نقدم لك نظاماً متكاملاً يمنحك راحة البال، ويوفر لك المال، ويضمن لك الامتثال الكامل للوائح الرسمية.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Feature Card -->
-                <div class="feature-card text-center bg-white p-8 rounded-xl shadow-lg">
-                    <div class="text-5xl brand-gold mb-4">🛡️</div>
-                    <h3 class="text-xl font-bold brand-blue mb-2">حماية فائقة من السرقة</h3>
-                    <p class="text-gray-600">تتبع لحظي لموقع سيارتك مع إمكانية إيقاف المحرك عن بعد بضغطة زر من جوالك.</p>
+                <div class="feature-card text-center bg-white p-6 sm:p-8 rounded-xl shadow-lg">
+                    <div class="text-4xl sm:text-5xl brand-gold mb-4">🛡️</div>
+                    <h3 class="text-lg sm:text-xl font-bold brand-blue mb-2">حماية فائقة من السرقة</h3>
+                    <p class="text-sm sm:text-base text-gray-600">تتبع لحظي لموقع سيارتك مع إمكانية إيقاف المحرك عن بعد بضغطة زر من جوالك.</p>
                 </div>
                 <!-- Feature Card -->
-                <div class="feature-card text-center bg-white p-8 rounded-xl shadow-lg">
-                    <div class="text-5xl brand-gold mb-4">⛽</div>
-                    <h3 class="text-xl font-bold brand-blue mb-2">توفير في استهلاك الوقود</h3>
-                    <p class="text-gray-600">تقارير ذكية تساعدك على تحسين كفاءة القيادة وتقليل مصروفات الوقود حتى 30%.</p>
+                <div class="feature-card text-center bg-white p-6 sm:p-8 rounded-xl shadow-lg">
+                    <div class="text-4xl sm:text-5xl brand-gold mb-4">⛽</div>
+                    <h3 class="text-lg sm:text-xl font-bold brand-blue mb-2">توفير في استهلاك الوقود</h3>
+                    <p class="text-sm sm:text-base text-gray-600">تقارير ذكية تساعدك على تحسين كفاءة القيادة وتقليل مصروفات الوقود حتى 30%.</p>
                 </div>
                 <!-- Feature Card -->
-                <div class="feature-card text-center bg-white p-8 rounded-xl shadow-lg">
-                    <div class="text-5xl brand-gold mb-4">📋</div>
-                    <h3 class="text-xl font-bold brand-blue mb-2">اعتماد رسمي وتقارير فورية</h3>
-                    <p class="text-gray-600">متوافقون تماماً مع متطلبات منصة "وصل" لاستخراج كرت التشغيل بسهولة ودون عناء.</p>
+                <div class="feature-card text-center bg-white p-6 sm:p-8 rounded-xl shadow-lg">
+                    <div class="text-4xl sm:text-5xl brand-gold mb-4">📋</div>
+                    <h3 class="text-lg sm:text-xl font-bold brand-blue mb-2">اعتماد رسمي وتقارير فورية</h3>
+                    <p class="text-sm sm:text-base text-gray-600">متوافقون تماماً مع متطلبات منصة "وصل" لاستخراج كرت التشغيل بسهولة ودون عناء.</p>
                 </div>
             </div>
         </div>
     </section>
     
     <!-- Services Tabs Section -->
-    <section id="services" class="py-20 bg-gray-100">
-        <div class="container mx-auto px-6">
+    <section id="services" class="py-16 sm:py-20 bg-gray-100">
+        <div class="container mx-auto px-4 sm:px-6">
             <div class="text-center mb-12">
-                <h2 class="text-4xl font-extrabold brand-blue mb-4">حلول مصممة خصيصاً لك</h2>
-                <p class="text-lg text-gray-600 max-w-3xl mx-auto">سواء كنت فرداً أو تدير أسطولاً ضخماً، لدينا الحل المناسب لاحتياجاتك.</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold brand-blue mb-4">حلول مصممة خصيصاً لك</h2>
+                <p class="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">سواء كنت فرداً أو تدير أسطولاً ضخماً، لدينا الحل المناسب لاحتياجاتك.</p>
             </div>
             <div class="max-w-4xl mx-auto">
-                <div class="flex justify-center border-b-2 border-gray-200 mb-8 space-x-2 space-x-reverse">
-                    <button class="tab-button text-lg font-bold py-3 px-6 text-gray-500 border-b-4 border-transparent active" onclick="openTab(event, 'personal')">الأفراد</button>
-                    <button class="tab-button text-lg font-bold py-3 px-6 text-gray-500 border-b-4 border-transparent" onclick="openTab(event, 'rental')">شركات التأجير</button>
-                    <button class="tab-button text-lg font-bold py-3 px-6 text-gray-500 border-b-4 border-transparent" onclick="openTab(event, 'fleet')">أساطيل النقل</button>
-                    <button class="tab-button text-lg font-bold py-3 px-6 text-gray-500 border-b-4 border-transparent" onclick="openTab(event, 'schools')">المدارس</button>
+                <div class="flex flex-wrap justify-center border-b-2 border-gray-200 mb-8 gap-2">
+                    <button class="tab-button text-sm sm:text-lg font-bold py-2 px-4 sm:py-3 sm:px-6 text-gray-500 border-b-4 border-transparent active" onclick="openTab(event, 'personal')">الأفراد</button>
+                    <button class="tab-button text-sm sm:text-lg font-bold py-2 px-4 sm:py-3 sm:px-6 text-gray-500 border-b-4 border-transparent" onclick="openTab(event, 'rental')">شركات التأجير</button>
+                    <button class="tab-button text-sm sm:text-lg font-bold py-2 px-4 sm:py-3 sm:px-6 text-gray-500 border-b-4 border-transparent" onclick="openTab(event, 'fleet')">أساطيل النقل</button>
+                    <button class="tab-button text-sm sm:text-lg font-bold py-2 px-4 sm:py-3 sm:px-6 text-gray-500 border-b-4 border-transparent" onclick="openTab(event, 'schools')">المدارس</button>
                 </div>
-                <div id="personal" class="tab-content bg-white p-8 rounded-xl shadow-md">
-                    <h3 class="text-2xl font-bold brand-blue mb-4">حلول الأمان للأفراد</h3>
-                    <p class="text-gray-700">نوفر لك أفضل جهاز تتبع سيارات صغير ومخفي لحماية سيارتك من السرقة، ومراقبة السائق الخاص، والاطمئنان على سلامة أفراد عائلتك في كل رحلة. استمتع براحة البال مع نظام تتبع يمنحك رؤية كاملة لموقع وسرعة سيارتك على مدار الساعة.</p>
+                <div id="personal" class="tab-content bg-white p-6 sm:p-8 rounded-xl shadow-md">
+                    <h3 class="text-xl sm:text-2xl font-bold brand-blue mb-4">حلول الأمان للأفراد</h3>
+                    <p class="text-sm sm:text-base text-gray-700">نوفر لك أفضل جهاز تتبع سيارات صغير ومخفي لحماية سيارتك من السرقة، ومراقبة السائق الخاص، والاطمئنان على سلامة أفراد عائلتك في كل رحلة. استمتع براحة البال مع نظام تتبع يمنحك رؤية كاملة لموقع وسرعة سيارتك على مدار الساعة.</p>
                 </div>
-                <div id="rental" class="tab-content bg-white p-8 rounded-xl shadow-md" style="display:none;">
-                    <h3 class="text-2xl font-bold brand-blue mb-4">إدارة فعالة لشركات تأجير السيارات</h3>
-                    <p class="text-gray-700">قم بإدارة أسطول سيارات التأجير الخاص بك بكفاءة. يتيح لك نظامنا تتبع جميع السيارات، ومعرفة أوقات التشغيل، وتحديد مواقعها بدقة، مما يقلل من مخاطر السرقة ويزيد من أرباحك التشغيلية.</p>
+                <div id="rental" class="tab-content bg-white p-6 sm:p-8 rounded-xl shadow-md" style="display:none;">
+                    <h3 class="text-xl sm:text-2xl font-bold brand-blue mb-4">إدارة فعالة لشركات تأجير السيارات</h3>
+                    <p class="text-sm sm:text-base text-gray-700">قم بإدارة أسطول سيارات التأجير الخاص بك بكفاءة. يتيح لك نظامنا تتبع جميع السيارات، ومعرفة أوقات التشغيل، وتحديد مواقعها بدقة، مما يقلل من مخاطر السرقة ويزيد من أرباحك التشغيلية.</p>
                 </div>
-                <div id="fleet" class="tab-content bg-white p-8 rounded-xl shadow-md" style="display:none;">
-                    <h3 class="text-2xl font-bold brand-blue mb-4">تحكم كامل في أساطيل النقل والشاحنات</h3>
-                    <p class="text-gray-700">حلول متخصصة لتتبع الشاحنات والمعدات الثقيلة، مع تقارير مفصلة عن ساعات العمل، استهلاك الوقود، والامتثال الكامل لمتطلبات منصة "وصل" لاستخراج كرت التشغيل.</p>
+                <div id="fleet" class="tab-content bg-white p-6 sm:p-8 rounded-xl shadow-md" style="display:none;">
+                    <h3 class="text-xl sm:text-2xl font-bold brand-blue mb-4">تحكم كامل في أساطيل النقل والشاحنات</h3>
+                    <p class="text-sm sm:text-base text-gray-700">حلول متخصصة لتتبع الشاحنات والمعدات الثقيلة، مع تقارير مفصلة عن ساعات العمل، استهلاك الوقود، والامتثال الكامل لمتطلبات منصة "وصل" لاستخراج كرت التشغيل.</p>
                 </div>
-                <div id="schools" class="tab-content bg-white p-8 rounded-xl shadow-md" style="display:none;">
-                    <h3 class="text-2xl font-bold brand-blue mb-4">سلامة الطلاب هي أولويتنا</h3>
-                    <p class="text-gray-700">اضمن سلامة الطلاب مع نظام تتبع حافلات المدارس. راقب مسار الحافلة، واحصل على تنبيهات عند الوصول والمغادرة، وشارك الموقع مع أولياء الأمور لراحتهم وراحة بالك.</p>
+                <div id="schools" class="tab-content bg-white p-6 sm:p-8 rounded-xl shadow-md" style="display:none;">
+                    <h3 class="text-xl sm:text-2xl font-bold brand-blue mb-4">سلامة الطلاب هي أولويتنا</h3>
+                    <p class="text-sm sm:text-base text-gray-700">اضمن سلامة الطلاب مع نظام تتبع حافلات المدارس. راقب مسار الحافلة، واحصل على تنبيهات عند الوصول والمغادرة، وشارك الموقع مع أولياء الأمور لراحتهم وراحة بالك.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Free Trial Section -->
-    <section class="py-20">
-        <div class="container mx-auto px-6">
+    <section class="py-16 sm:py-20">
+        <div class="container mx-auto px-4 sm:px-6">
             <div class="text-center mb-12">
-                <h2 class="text-4xl font-extrabold brand-blue mb-4">شاهد قوة نظام تتبع المركبات بنفسك الآن</h2>
-                <p class="text-lg text-gray-600 max-w-3xl mx-auto">جرّب واجهة تطبيق “تواصل الرياض” واكتشف سهولة إدارة أسطولك أو سيارتك عبر حسابنا التجريبي.</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold brand-blue mb-4">شاهد قوة نظام تتبع المركبات بنفسك الآن</h2>
+                <p class="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">جرّب واجهة تطبيق “تواصل الرياض” واكتشف سهولة إدارة أسطولك أو سيارتك عبر حسابنا التجريبي.</p>
             </div>
             <div class="flex flex-wrap items-center justify-center -mx-4">
                 <div class="w-full md:w-1/2 px-4 mb-8 md:mb-0">
-                    <img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/images/154508e7a08de3cf.jpeg" alt="واجهة تطبيق تواصل الرياض على الهاتف" class="rounded-lg shadow-2xl mx-auto">
+                    <img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/images/154508e7a08de3cf.jpeg" alt="واجهة تطبيق تواصل الرياض على الهاتف" class="rounded-lg shadow-2xl mx-auto max-w-xs sm:max-w-sm">
                 </div>
                 <div class="w-full md:w-1/2 px-4">
-                    <ul class="space-y-4 text-lg">
+                    <ul class="space-y-4 text-base sm:text-lg">
                         <li class="flex items-start"><span class="brand-gold text-2xl ml-3 mt-1">&#10003;</span> <span>**خريطة تفاعلية 24/7:** متابعة لحظية لمواقع وسرعات مركباتك.</span></li>
                         <li class="flex items-start"><span class="brand-gold text-2xl ml-3 mt-1">&#10003;</span> <span>**تقارير فورية:** تصدير PDF/Excel للرحلات، الوقود، وأوقات التشغيل.</span></li>
                         <li class="flex items-start"><span class="brand-gold text-2xl ml-3 mt-1">&#10003;</span> <span>**تنبيهات ذكية:** سرعة زائدة، خروج عن المناطق المحددة، وتنبيهات صيانة.</span></li>
                         <li class="flex items-start"><span class="brand-gold text-2xl ml-3 mt-1">&#10003;</span> <span>**ربط مباشر بمنصة وصل:** استخراج كرت التشغيل خلال 24 ساعة بضغطة زر.</span></li>
                     </ul>
                     <div class="mt-8 text-center md:text-right">
-                        <a href="#" class="bg-brand-blue text-white font-bold py-3 px-8 rounded-lg hover:bg-opacity-90 transition-colors text-lg">
+                        <a href="#" class="bg-brand-blue text-white font-bold py-3 px-8 rounded-lg hover:bg-opacity-90 transition-colors text-base sm:text-lg">
                             جرب النظام مجاناً الآن
                         </a>
                     </div>
@@ -261,18 +261,18 @@
     </section>
 
     <!-- Dashcam Section -->
-    <section class="py-20 bg-gray-100">
-        <div class="container mx-auto px-6">
+    <section class="py-16 sm:py-20 bg-gray-100">
+        <div class="container mx-auto px-4 sm:px-6">
             <div class="flex flex-wrap items-center -mx-4">
-                <div class="w-full md:w-1/2 px-4 mb-8 md:mb-0">
-                    <h2 class="text-4xl font-extrabold brand-blue mb-4">تعرّف على الداش كام الذكي</h2>
-                    <p class="text-lg text-gray-700 mb-6">حافظ على سلامتك وسلامة سائقيك مع أحدث داش كام ذكي في السوق. هذه الكاميرا المزودة بالذكاء الاصطناعي لا تسجل الطريق فقط، بل تراقب سلوك السائق لضمان أعلى مستويات الأمان.</p>
-                    <ul class="space-y-3">
+                <div class="w-full md:w-1/2 px-4 mb-8 md:mb-0 md:pr-8">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold brand-blue mb-4">تعرّف على الداش كام الذكي</h2>
+                    <p class="text-base sm:text-lg text-gray-700 mb-6">حافظ على سلامتك وسلامة سائقيك مع أحدث داش كام ذكي في السوق. هذه الكاميرا المزودة بالذكاء الاصطناعي لا تسجل الطريق فقط، بل تراقب سلوك السائق لضمان أعلى مستويات الأمان.</p>
+                    <ul class="space-y-3 text-sm sm:text-base">
                         <li class="flex items-center"><span class="text-green-500 text-2xl ml-3">&#10003;</span>تنبيه السائق عند النعاس أو التثاؤب.</li>
                         <li class="flex items-center"><span class="text-green-500 text-2xl ml-3">&#10003;</span>تنبيه عند عدم التركيز أو استخدام الجوال أثناء القيادة.</li>
                         <li class="flex items-center"><span class="text-green-500 text-2xl ml-3">&#10003;</span>جودة تصوير عالية الدقة (Full HD) ليلاً ونهاراً.</li>
                     </ul>
-                     <a href="#contact-form" class="mt-8 inline-block bg-amber-500 text-brand-blue font-bold py-3 px-8 rounded-lg hover:bg-amber-400 transition-colors">
+                     <a href="#contact-form" class="mt-8 inline-block bg-amber-500 text-brand-blue font-bold py-3 px-8 rounded-lg hover:bg-amber-400 transition-colors text-base sm:text-lg">
                         اطلب الداش كام الذكي الآن
                     </a>
                 </div>
@@ -284,126 +284,126 @@
     </section>
 
     <!-- Devices Section -->
-    <section class="py-20">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-extrabold brand-blue mb-4">أجهزة تتبع GPS أوروبية هي الأكثر دقة وموثوقية</h2>
-            <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-10">نحن نستخدم فقط أجهزة تتبع أوروبية الصنع وعالية الجودة لضمان دقة لا تضاهى في تحديد المواقع واستمرارية في الخدمة يمكنك الاعتماد عليها.</p>
+    <section class="py-16 sm:py-20 overflow-hidden">
+        <div class="container mx-auto px-4 sm:px-6 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold brand-blue mb-4">أجهزة تتبع GPS أوروبية</h2>
+            <p class="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto mb-10">نستخدم فقط أجهزة تتبع أوروبية الصنع وعالية الجودة لضمان دقة لا تضاهى في تحديد المواقع واستمرارية في الخدمة يمكنك الاعتماد عليها.</p>
             <div class="swiper-container devices-slider">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/images/30b925b64c015b6d.jpeg" alt="[Image of جهاز تتبع GPS موديل 1]" class="h-48 rounded-lg shadow-lg"></div>
-                    <div class="swiper-slide"><img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/images/d3de4063223f66a9.jpeg" alt="[Image of جهاز تتبع GPS موديل 2]" class="h-48 rounded-lg shadow-lg"></div>
-                    <div class="swiper-slide"><img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/images/62153b6f0e3f7c46.jpeg" alt="[Image of جهاز تتبع GPS موديل 3]" class="h-48 rounded-lg shadow-lg"></div>
-                    <div class="swiper-slide"><img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/images/30b925b64c015b6d.jpeg" alt="[Image of جهاز تتبع GPS موديل 4]" class="h-48 rounded-lg shadow-lg"></div>
-                    <div class="swiper-slide"><img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/images/d3de4063223f66a9.jpeg" alt="[Image of جهاز تتبع GPS موديل 5]" class="h-48 rounded-lg shadow-lg"></div>
+                    <div class="swiper-slide"><img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/images/30b925b64c015b6d.jpeg" alt="جهاز تتبع GPS موديل 1" class="h-40 sm:h-48 rounded-lg shadow-lg"></div>
+                    <div class="swiper-slide"><img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/images/d3de4063223f66a9.jpeg" alt="جهاز تتبع GPS موديل 2" class="h-40 sm:h-48 rounded-lg shadow-lg"></div>
+                    <div class="swiper-slide"><img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/images/62153b6f0e3f7c46.jpeg" alt="جهاز تتبع GPS موديل 3" class="h-40 sm:h-48 rounded-lg shadow-lg"></div>
+                    <div class="swiper-slide"><img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/images/30b925b64c015b6d.jpeg" alt="جهاز تتبع GPS موديل 4" class="h-40 sm:h-48 rounded-lg shadow-lg"></div>
+                    <div class="swiper-slide"><img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/images/d3de4063223f66a9.jpeg" alt="جهاز تتبع GPS موديل 5" class="h-40 sm:h-48 rounded-lg shadow-lg"></div>
                 </div>
-                 <div class="swiper-pagination"></div>
+                 <div class="swiper-pagination mt-8"></div>
             </div>
         </div>
     </section>
 
      <!-- About Us Section -->
-    <section class="py-20 bg-gray-100">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-extrabold brand-blue mb-4">عن شركة تواصل الرياض</h2>
-            <p class="text-lg text-gray-700 max-w-4xl mx-auto mb-8">
+    <section class="py-16 sm:py-20 bg-gray-100">
+        <div class="container mx-auto px-4 sm:px-6 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold brand-blue mb-4">عن شركة تواصل الرياض</h2>
+            <p class="text-base sm:text-lg text-gray-700 max-w-4xl mx-auto mb-8">
                 تأسست شركة تواصل الرياض منذ عام 2012 على يد نخبة من الخبراء والمختصين، حيث وضعت الشركة أسساً واستراتيجيات قوية لتصبح واحدة من الشركات الرائدة في المملكة العربية السعودية. تعتمد استراتيجيتنا على دراسة احتياجات السوق وتقديم أحدث الأجهزة والأنظمة، مع مراعاة توفير خدمات شاملة تتناسب مع التكاليف والجودة العالمية.
             </p>
-            <a href="#" class="bg-brand-blue text-white font-bold py-3 px-8 rounded-lg hover:bg-opacity-90 transition-colors">
+            <a href="#" class="bg-brand-blue text-white font-bold py-3 px-8 rounded-lg hover:bg-opacity-90 transition-colors text-base sm:text-lg">
                 📄 تحميل الملف التعريفي للشركة
             </a>
         </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section class="py-20">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-extrabold brand-blue mb-12 text-center">آراء عملائنا</h2>
+    <section class="py-16 sm:py-20 overflow-hidden">
+        <div class="container mx-auto px-4 sm:px-6">
+            <h2 class="text-3xl sm:text-4xl font-extrabold brand-blue mb-12 text-center">آراء عملائنا</h2>
             <div class="swiper-container testimonials-slider">
                 <div class="swiper-wrapper pb-12">
                      <!-- Testimonial Card -->
-                    <div class="swiper-slide h-full">
-                        <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-brand-gold h-full flex flex-col justify-between">
-                            <p class="text-gray-600 mb-6">"شكراً لشركة تواصل الرياض، أنا مشترك معهم من أكثر من ٧ سنوات وخدماتهم مميزة. بصراحة هم أفضل شركة تتبع، عندهم عروض وخصومات واستخدام التطبيق سهل جداً. أوصي بهم بشدة."</p>
+                    <div class="swiper-slide h-full px-2">
+                        <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg border-t-4 border-brand-gold h-full flex flex-col justify-between">
+                            <p class="text-sm sm:text-base text-gray-600 mb-6">"شكراً لشركة تواصل الرياض، أنا مشترك معهم من أكثر من ٧ سنوات وخدماتهم مميزة. بصراحة هم أفضل شركة تتبع، عندهم عروض وخصومات واستخدام التطبيق سهل جداً. أوصي بهم بشدة."</p>
                             <div class="flex items-center mt-auto">
                                 <img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/images/f90912176461c341.jpeg" alt="صورة رمزية للسيدة شذى الإبراهيمي" class="w-12 h-12 rounded-full mr-4 ml-4 object-cover">
                                 <div>
-                                    <p class="font-bold text-gray-800">Shatha Albrahimi</p>
-                                    <p class="text-sm text-gray-500">عميل منذ ٧ سنوات</p>
+                                    <p class="font-bold text-gray-800 text-sm">Shatha Albrahimi</p>
+                                    <p class="text-xs text-gray-500">عميل منذ ٧ سنوات</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- Testimonial Card -->
-                    <div class="swiper-slide h-full">
-                        <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-brand-gold h-full flex flex-col justify-between">
-                            <p class="text-gray-600 mb-6">"ركبت جهاز تتبع قبل سنتين، وعند رغبتي في نقله لسيارة أخرى، تواصلت معهم عبر الواتساب وكان التجاوب سريعاً وتحديد الموعد سهلاً وسلساً. أقدّر هذا المستوى المتميز من الخدمة."</p>
+                    <div class="swiper-slide h-full px-2">
+                        <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg border-t-4 border-brand-gold h-full flex flex-col justify-between">
+                            <p class="text-sm sm:text-base text-gray-600 mb-6">"ركبت جهاز تتبع قبل سنتين، وعند رغبتي في نقله لسيارة أخرى، تواصلت معهم عبر الواتساب وكان التجاوب سريعاً وتحديد الموعد سهلاً وسلساً. أقدّر هذا المستوى المتميز من الخدمة."</p>
                             <div class="flex items-center mt-auto">
                                 <img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/images/681df79d30026e2a.jpeg" alt="صورة رمزية للسيد عمر الهلالي" class="w-12 h-12 rounded-full mr-4 ml-4 object-cover">
                                 <div>
-                                    <p class="font-bold text-gray-800">عمر الهلالي</p>
-                                    <p class="text-sm text-gray-500">عميل ومراجع محلي</p>
+                                    <p class="font-bold text-gray-800 text-sm">عمر الهلالي</p>
+                                    <p class="text-xs text-gray-500">عميل ومراجع محلي</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- Testimonial Card -->
-                    <div class="swiper-slide h-full">
-                        <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-brand-gold h-full flex flex-col justify-between">
-                            <p class="text-gray-600 mb-6">"نحن مؤسسة مرجانة الساحل للنقليات كنا متعاملين مع تتبع مركبات غير شركة تواصل الرياض، سبب تركنا لهم هو عدم التجاوب بسرعة كافية. أنصح كل شركة ومؤسسة بالتعامل مع تواصل الرياض."</p>
+                    <div class="swiper-slide h-full px-2">
+                        <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg border-t-4 border-brand-gold h-full flex flex-col justify-between">
+                            <p class="text-sm sm:text-base text-gray-600 mb-6">"نحن مؤسسة مرجانة الساحل للنقليات كنا متعاملين مع تتبع مركبات غير شركة تواصل الرياض، سبب تركنا لهم هو عدم التجاوب بسرعة كافية. أنصح كل شركة ومؤسسة بالتعامل مع تواصل الرياض."</p>
                             <div class="flex items-center mt-auto">
                                 <img src="https://storage.googleapis.com/gemini-prod-us-west1-assets/images/330b65f0ed56b198.jpeg" alt="صورة رمزية للسيد عبودي سارحة" class="w-12 h-12 rounded-full mr-4 ml-4 object-cover">
                                 <div>
-                                    <p class="font-bold text-gray-800">Aboody sarebah</p>
-                                    <p class="text-sm text-gray-500">مؤسسة مرجانة الساحل</p>
+                                    <p class="font-bold text-gray-800 text-sm">Aboody sarebah</p>
+                                    <p class="text-xs text-gray-500">مؤسسة مرجانة الساحل</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- Testimonial Card -->
-                    <div class="swiper-slide h-full">
-                         <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-brand-gold h-full flex flex-col justify-between">
-                            <p class="text-gray-600 mb-6">"بصراحة والله بدون مجاملة، إخواني عندهم اشتراك غير تواصل الرياض، لما أدخل على البرنامج ما أعرف منه شي، أما شركة تواصل الرياض والله إنها تستاهل ١٠٠٠٠ نجمة."</p>
+                    <div class="swiper-slide h-full px-2">
+                         <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg border-t-4 border-brand-gold h-full flex flex-col justify-between">
+                            <p class="text-sm sm:text-base text-gray-600 mb-6">"بصراحة والله بدون مجاملة، إخواني عندهم اشتراك غير تواصل الرياض، لما أدخل على البرنامج ما أعرف منه شي، أما شركة تواصل الرياض والله إنها تستاهل ١٠٠٠٠ نجمة."</p>
                             <div class="flex items-center mt-auto">
                                 <img src="https://placehold.co/50x50/cccccc/FFFFFF?text=YQ" alt="صورة رمزية للسيد يونس قاسم" class="w-12 h-12 rounded-full mr-4 ml-4 object-cover">
                                 <div>
-                                    <p class="font-bold text-gray-800">Yunes Qasem</p>
-                                    <p class="text-sm text-gray-500">عميل جديد</p>
+                                    <p class="font-bold text-gray-800 text-sm">Yunes Qasem</p>
+                                    <p class="text-xs text-gray-500">عميل جديد</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                 <div class="swiper-pagination"></div>
+                 <div class="swiper-pagination mt-8"></div>
             </div>
         </div>
     </section>
 
     <!-- Our Clients Section -->
-    <section class="py-20 bg-gray-100">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-extrabold brand-blue mb-4">عملاؤنا وشركاء النجاح</h2>
-             <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-10">نفخر بخدمة نخبة من أكبر الشركات والمؤسسات الحكومية والخاصة في المملكة.</p>
+    <section class="py-16 sm:py-20 bg-gray-100 overflow-hidden">
+        <div class="container mx-auto px-4 sm:px-6 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold brand-blue mb-4">عملاؤنا وشركاء النجاح</h2>
+             <p class="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto mb-10">نفخر بخدمة نخبة من أكبر الشركات والمؤسسات الحكومية والخاصة في المملكة.</p>
              <div class="swiper-container logo-slider">
                 <div class="swiper-wrapper">
                     <!-- IMPORTANT: Replace these placeholder images with the official client logos -->
-                    <div class="swiper-slide"><img src="https://placehold.co/150x80/FFFFFF/000000?text=أمانة+الرياض" alt="شعار أمانة منطقة الرياض" class="mx-auto h-16 grayscale hover:grayscale-0 transition-all duration-300"></div>
-                    <div class="swiper-slide"><img src="https://placehold.co/150x80/FFFFFF/000000?text=وزارة+الإعلام" alt="شعار وزارة الإعلام" class="mx-auto h-16 grayscale hover:grayscale-0 transition-all duration-300"></div>
-                    <div class="swiper-slide"><img src="https://placehold.co/150x80/FFFFFF/000000?text=مستشفى+المواساة" alt="شعار مستشفى المواساة" class="mx-auto h-16 grayscale hover:grayscale-0 transition-all duration-300"></div>
-                    <div class="swiper-slide"><img src="https://placehold.co/150x80/FFFFFF/000000?text=شركة+المياه+الوطنية" alt="شعار شركة المياه الوطنية" class="mx-auto h-16 grayscale hover:grayscale-0 transition-all duration-300"></div>
-                    <div class="swiper-slide"><img src="https://placehold.co/150x80/FFFFFF/000000?text=الرومانسية" alt="شعار شركة الرومانسية" class="mx-auto h-16 grayscale hover:grayscale-0 transition-all duration-300"></div>
-                    <div class="swiper-slide"><img src="https://placehold.co/150x80/FFFFFF/000000?text=مدينة+الملك+عبدالعزيز" alt="شعار مدينة الملك عبدالعزيز للعلوم والتقنية" class="mx-auto h-16 grayscale hover:grayscale-0 transition-all duration-300"></div>
-                    <div class="swiper-slide"><img src="https://placehold.co/150x80/FFFFFF/000000?text=موانئ" alt="شعار الهيئة العامة للموانئ" class="mx-auto h-16 grayscale hover:grayscale-0 transition-all duration-300"></div>
+                    <div class="swiper-slide"><img src="https://placehold.co/150x80/FFFFFF/000000?text=أمانة+الرياض" alt="شعار أمانة منطقة الرياض" class="mx-auto h-12 sm:h-16 grayscale hover:grayscale-0 transition-all duration-300"></div>
+                    <div class="swiper-slide"><img src="https://placehold.co/150x80/FFFFFF/000000?text=وزارة+الإعلام" alt="شعار وزارة الإعلام" class="mx-auto h-12 sm:h-16 grayscale hover:grayscale-0 transition-all duration-300"></div>
+                    <div class="swiper-slide"><img src="https://placehold.co/150x80/FFFFFF/000000?text=مستشفى+المواساة" alt="شعار مستشفى المواساة" class="mx-auto h-12 sm:h-16 grayscale hover:grayscale-0 transition-all duration-300"></div>
+                    <div class="swiper-slide"><img src="https://placehold.co/150x80/FFFFFF/000000?text=شركة+المياه+الوطنية" alt="شعار شركة المياه الوطنية" class="mx-auto h-12 sm:h-16 grayscale hover:grayscale-0 transition-all duration-300"></div>
+                    <div class="swiper-slide"><img src="https://placehold.co/150x80/FFFFFF/000000?text=الرومانسية" alt="شعار شركة الرومانسية" class="mx-auto h-12 sm:h-16 grayscale hover:grayscale-0 transition-all duration-300"></div>
+                    <div class="swiper-slide"><img src="https://placehold.co/150x80/FFFFFF/000000?text=مدينة+الملك+عبدالعزيز" alt="شعار مدينة الملك عبدالعزيز للعلوم والتقنية" class="mx-auto h-12 sm:h-16 grayscale hover:grayscale-0 transition-all duration-300"></div>
+                    <div class="swiper-slide"><img src="https://placehold.co/150x80/FFFFFF/000000?text=موانئ" alt="شعار الهيئة العامة للموانئ" class="mx-auto h-12 sm:h-16 grayscale hover:grayscale-0 transition-all duration-300"></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Branches Map Section -->
-    <section class="py-20">
-        <div class="container mx-auto px-6">
+    <section class="py-16 sm:py-20">
+        <div class="container mx-auto px-4 sm:px-6">
             <div class="text-center mb-12">
-                <h2 class="text-4xl font-extrabold brand-blue mb-4">فروعنا تغطي كافة أنحاء المملكة</h2>
-                <p class="text-lg text-gray-600 max-w-3xl mx-auto">تفضل بزيارة أقرب فرع لك في الرياض، جدة، الدمام، جازان، تبوك، القصيم، والمدينة المنورة.</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold brand-blue mb-4">فروعنا تغطي كافة أنحاء المملكة</h2>
+                <p class="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">تفضل بزيارة أقرب فرع لك في الرياض، جدة، الدمام، جازان، تبوك، القصيم، والمدينة المنورة.</p>
             </div>
             <div class="map-container rounded-lg shadow-2xl">
                  <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d6981144.113589886!2d41.93380434774577!3d24.08986884507027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z2KfZhNmF2K_ZitmG2Kkg2KjYp9mE2YXZiiDYqNin2YTYs9i52YjYr9mK!5e0!3m2!1sar!2seg!4v1689626931245!5m2!1sar!2seg" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -412,46 +412,46 @@
     </section>
     
     <!-- Safest Way Section -->
-    <section class="py-20 bg-gray-100">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-extrabold brand-blue mb-4">الطريقة الأمن والأسهل لتتبع وتأمين المركبات</h2>
-            <p class="text-lg text-gray-700 max-w-4xl mx-auto mb-8">
+    <section class="py-16 sm:py-20 bg-gray-100">
+        <div class="container mx-auto px-4 sm:px-6 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold brand-blue mb-4">الطريقة الأمن والأسهل لتتبع وتأمين المركبات</h2>
+            <p class="text-base sm:text-lg text-gray-700 max-w-4xl mx-auto mb-8">
                 نقدم لك أفضل نظام إدارة أسطول متكامل بحيث يحصل ملاك الأسطول على أعلى مستوى من التحكم في طريقة عمل مركباتهم وسائقيهم وتكاليف تشغيل الأسطول. قد أثبتت النتائج مدى أهمية هذه الخدمة للشركات الكبيرة والمؤسسات الصغيرة وأيضا على المستوى الشخصي.
             </p>
-             <a href="#contact-form" class="bg-amber-500 text-brand-blue font-bold py-3 px-8 rounded-lg hover:bg-amber-400 transition-colors transform hover:scale-105">
+             <a href="#contact-form" class="bg-amber-500 text-brand-blue font-bold py-3 px-8 rounded-lg hover:bg-amber-400 transition-colors transform hover:scale-105 text-base sm:text-lg">
                 أضغط هنا للاستفسار
             </a>
         </div>
     </section>
     
      <!-- Technical Support Section -->
-    <section class="py-20">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-extrabold brand-blue mb-4">دعم فني متكامل لجميع أنظمة تتبع المركبات</h2>
-            <p class="text-lg text-gray-700 max-w-4xl mx-auto mb-8">
+    <section class="py-16 sm:py-20">
+        <div class="container mx-auto px-4 sm:px-6 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold brand-blue mb-4">دعم فني متكامل لجميع أنظمة تتبع المركبات</h2>
+            <p class="text-base sm:text-lg text-gray-700 max-w-4xl mx-auto mb-8">
                بكل فخر، نقدم في "تواصل الرياض" دعماً فنياً متكاملاً لمساعدتك في تحقيق أقصى استفادة من نظام تتبع السيارات الخاص بك. فريقنا جاهز للرد السريع وتقديم الإرشادات وحل أي مشكلة قد تواجهك. سواء كنت عميل فردي أو شركة، نضمن لك تجربة سلسة ودعمًا فعّالاً يواكب احتياجاتك في كل مرحلة.
             </p>
-            <div class="flex justify-center gap-4">
-                 <a href="#" class="bg-brand-blue text-white font-bold py-3 px-8 rounded-lg hover:bg-opacity-90 transition-colors">تواصل مع الدعم</a>
-                 <a href="#" class="bg-gray-200 text-brand-blue font-bold py-3 px-8 rounded-lg hover:bg-gray-300 transition-colors">شروحات الفيديو</a>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                 <a href="#" class="bg-brand-blue text-white font-bold py-3 px-8 rounded-lg hover:bg-opacity-90 transition-colors w-full sm:w-auto">تواصل مع الدعم</a>
+                 <a href="#" class="bg-gray-200 text-brand-blue font-bold py-3 px-8 rounded-lg hover:bg-gray-300 transition-colors w-full sm:w-auto">شروحات الفيديو</a>
             </div>
         </div>
     </section>
 
     <!-- Contact Form Section -->
-    <section id="contact-form" class="py-20 bg-gray-100">
-        <div class="container mx-auto px-6">
-             <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-2xl shadow-2xl">
+    <section id="contact-form" class="py-16 sm:py-20 bg-gray-100">
+        <div class="container mx-auto px-4 sm:px-6">
+             <div class="max-w-4xl mx-auto bg-white p-6 sm:p-8 md:p-12 rounded-2xl shadow-2xl">
                 <div class="grid lg:grid-cols-2 gap-12 items-center">
                     <div class="text-center lg:text-right">
-                        <h2 class="text-4xl font-extrabold brand-blue mb-4">ابدأ قصة نجاحك الآن</h2>
-                        <p class="text-lg text-gray-700 mb-8">املأ النموذج البسيط بجانبك وسيقوم أحد خبرائنا بالتواصل معك لتقديم استشارة مجانية وعرض سعر مخصص لاحتياجاتك.</p>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold brand-blue mb-4">ابدأ قصة نجاحك الآن</h2>
+                        <p class="text-base sm:text-lg text-gray-700 mb-8">املأ النموذج البسيط بجانبك وسيقوم أحد خبرائنا بالتواصل معك لتقديم استشارة مجانية وعرض سعر مخصص لاحتياجاتك.</p>
                         <div class="bg-amber-50 bg-opacity-50 border-r-4 border-brand-gold p-6 rounded-lg text-right space-y-4">
-                            <h3 class="text-xl font-bold brand-blue">ماذا ستحصل عليه؟</h3>
-                            <p class="flex items-start"><span class="text-green-500 font-bold ml-3">&#10003;</span> استشارة مجانية مع خبير لفهم احتياجاتك.</p>
-                            <p class="flex items-start"><span class="text-green-500 font-bold ml-3">&#10003;</span> عرض سعر مخصص ومنافس.</p>
-                            <p class="flex items-start"><span class="text-green-500 font-bold ml-3">&#10003;</span> جهاز تتبع مجاني مع الاشتراك.</p>
-                            <p class="flex items-start"><span class="text-green-500 font-bold ml-3">&#10003;</span> تركيب احترافي في موقعك.</p>
+                            <h3 class="text-lg sm:text-xl font-bold brand-blue">ماذا ستحصل عليه؟</h3>
+                            <p class="flex items-start text-sm sm:text-base"><span class="text-green-500 font-bold ml-3">&#10003;</span> استشارة مجانية مع خبير لفهم احتياجاتك.</p>
+                            <p class="flex items-start text-sm sm:text-base"><span class="text-green-500 font-bold ml-3">&#10003;</span> عرض سعر مخصص ومنافس.</p>
+                            <p class="flex items-start text-sm sm:text-base"><span class="text-green-500 font-bold ml-3">&#10003;</span> جهاز تتبع مجاني مع الاشتراك.</p>
+                            <p class="flex items-start text-sm sm:text-base"><span class="text-green-500 font-bold ml-3">&#10003;</span> تركيب احترافي في موقعك.</p>
                         </div>
                     </div>
                     <div class="w-full">
@@ -464,53 +464,53 @@
 
                             <!-- Step 1: Customer Type -->
                             <div id="step1" class="form-step active">
-                                <h3 class="text-xl font-bold brand-blue mb-6 text-center">أهلاً بك! لنبدأ، هل أنت فرد أم ممثل شركة؟</h3>
+                                <h3 class="text-lg sm:text-xl font-bold brand-blue mb-6 text-center">أهلاً بك! لنبدأ، هل أنت فرد أم ممثل شركة؟</h3>
                                 <div class="grid grid-cols-2 gap-4">
-                                    <div class="form-choice-card p-6 rounded-lg text-center cursor-pointer" onclick="selectChoice('customerType', 'individual')">
-                                        <div class="text-4xl mb-2">👤</div>
-                                        <p class="font-bold">فرد</p>
+                                    <div class="form-choice-card p-4 sm:p-6 rounded-lg text-center cursor-pointer" onclick="selectChoice('customerType', 'individual')">
+                                        <div class="text-3xl sm:text-4xl mb-2">👤</div>
+                                        <p class="font-bold text-sm sm:text-base">فرد</p>
                                     </div>
-                                    <div class="form-choice-card p-6 rounded-lg text-center cursor-pointer" onclick="selectChoice('customerType', 'company')">
-                                         <div class="text-4xl mb-2">🏢</div>
-                                        <p class="font-bold">شركة</p>
+                                    <div class="form-choice-card p-4 sm:p-6 rounded-lg text-center cursor-pointer" onclick="selectChoice('customerType', 'company')">
+                                         <div class="text-3xl sm:text-4xl mb-2">🏢</div>
+                                        <p class="font-bold text-sm sm:text-base">شركة</p>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Step 2: Service Type -->
                             <div id="step2" class="form-step">
-                                <h3 class="text-xl font-bold brand-blue mb-6 text-center">ممتاز! ما هي الخدمة التي تهتم بها بشكل أساسي؟</h3>
+                                <h3 class="text-lg sm:text-xl font-bold brand-blue mb-6 text-center">ممتاز! ما هي الخدمة التي تهتم بها بشكل أساسي؟</h3>
                                 <div class="space-y-4">
                                     <div class="form-choice-card p-4 rounded-lg cursor-pointer flex items-center" onclick="selectChoice('serviceType', 'tracking')">
                                         <input type="radio" name="service" class="hidden">
-                                        <p class="font-bold">تتبع وحماية المركبات</p>
+                                        <p class="font-bold text-sm sm:text-base">تتبع وحماية المركبات</p>
                                     </div>
                                     <div class="form-choice-card p-4 rounded-lg cursor-pointer flex items-center" onclick="selectChoice('serviceType', 'dashcam')">
                                         <input type="radio" name="service" class="hidden">
-                                        <p class="font-bold">داش كام ذكي</p>
+                                        <p class="font-bold text-sm sm:text-base">داش كام ذكي</p>
                                     </div>
                                      <div class="form-choice-card p-4 rounded-lg cursor-pointer flex items-center" onclick="selectChoice('serviceType', 'both')">
                                         <input type="radio" name="service" class="hidden">
-                                        <p class="font-bold">كلاهما معاً</p>
+                                        <p class="font-bold text-sm sm:text-base">كلاهما معاً</p>
                                     </div>
                                 </div>
-                                 <button type="button" class="mt-6 text-gray-600" onclick="prevStep()"> &rarr; رجوع</button>
+                                 <button type="button" class="mt-6 text-gray-600 text-sm" onclick="prevStep()"> &rarr; رجوع</button>
                             </div>
 
                             <!-- Step 3: Fleet Size (Conditional) -->
                             <div id="step3" class="form-step">
-                               <h3 class="text-xl font-bold brand-blue mb-6 text-center">كم عدد المركبات في أسطولكم؟</h3>
+                               <h3 class="text-lg sm:text-xl font-bold brand-blue mb-6 text-center">كم عدد المركبات في أسطولكم؟</h3>
                                <div class="space-y-4">
-                                     <div class="form-choice-card p-4 rounded-lg cursor-pointer" onclick="selectChoice('fleetSize', '1-10')"><p>1 - 10 مركبات</p></div>
-                                     <div class="form-choice-card p-4 rounded-lg cursor-pointer" onclick="selectChoice('fleetSize', '11-50')"><p>11 - 50 مركبة</p></div>
-                                     <div class="form-choice-card p-4 rounded-lg cursor-pointer" onclick="selectChoice('fleetSize', '50+')"><p>أكثر من 50 مركبة</p></div>
+                                     <div class="form-choice-card p-4 rounded-lg cursor-pointer text-sm sm:text-base" onclick="selectChoice('fleetSize', '1-10')"><p>1 - 10 مركبات</p></div>
+                                     <div class="form-choice-card p-4 rounded-lg cursor-pointer text-sm sm:text-base" onclick="selectChoice('fleetSize', '11-50')"><p>11 - 50 مركبة</p></div>
+                                     <div class="form-choice-card p-4 rounded-lg cursor-pointer text-sm sm:text-base" onclick="selectChoice('fleetSize', '50+')"><p>أكثر من 50 مركبة</p></div>
                                 </div>
-                                <button type="button" class="mt-6 text-gray-600" onclick="prevStep()">&rarr; رجوع</button>
+                                <button type="button" class="mt-6 text-gray-600 text-sm" onclick="prevStep()">&rarr; رجوع</button>
                             </div>
 
                             <!-- Step 4: Contact Info -->
                             <div id="step4" class="form-step">
-                                <h3 class="text-xl font-bold brand-blue mb-6 text-center">الخطوة الأخيرة! كيف يمكننا التواصل معك؟</h3>
+                                <h3 class="text-lg sm:text-xl font-bold brand-blue mb-6 text-center">الخطوة الأخيرة! كيف يمكننا التواصل معك؟</h3>
                                 <div class="space-y-4">
                                     <div>
                                         <label for="name" class="block mb-2 text-sm font-medium text-gray-900">الاسم بالكامل*</label>
@@ -522,8 +522,8 @@
                                     </div>
                                 </div>
                                 <div class="flex items-center justify-between mt-8">
-                                     <button type="button" class="text-gray-600" onclick="prevStep()">&rarr; رجوع</button>
-                                     <button type="submit" class="text-white bg-brand-blue hover:bg-opacity-90 focus:ring-4 focus:outline-none focus:ring-blue-300 font-bold rounded-lg text-lg px-8 py-3 text-center">احجز استشارتك المجانية</button>
+                                     <button type="button" class="text-gray-600 text-sm" onclick="prevStep()">&rarr; رجوع</button>
+                                     <button type="submit" class="text-white bg-brand-blue hover:bg-opacity-90 focus:ring-4 focus:outline-none focus:ring-blue-300 font-bold rounded-lg text-base px-6 sm:px-8 py-3 text-center">احجز استشارتك</button>
                                 </div>
                             </div>
                         </form>
@@ -535,9 +535,9 @@
 
     <!-- Footer -->
     <footer class="bg-brand-blue text-white">
-        <div class="container mx-auto px-6 py-8 text-center">
-            <p>&copy; 2025 شركة تواصل الرياض المحدودة. جميع الحقوق محفوظة.</p>
-            <p class="text-sm text-gray-300 mt-2">حلول معتمدة لتتبع المركبات وإدارة الأساطيل في المملكة العربية السعودية.</p>
+        <div class="container mx-auto px-4 sm:px-6 py-8 text-center">
+            <p class="text-sm sm:text-base">&copy; 2025 شركة تواصل الرياض المحدودة. جميع الحقوق محفوظة.</p>
+            <p class="text-xs sm:text-sm text-gray-300 mt-2">حلول معتمدة لتتبع المركبات وإدارة الأساطيل في المملكة العربية السعودية.</p>
         </div>
     </footer>
 
@@ -575,12 +575,12 @@
                 delay: 2000,
                 disableOnInteraction: false,
             },
-            slidesPerView: 2,
+            slidesPerView: 3,
             spaceBetween: 20,
             breakpoints: {
-                640: { slidesPerView: 3, spaceBetween: 30 },
-                768: { slidesPerView: 4, spaceBetween: 40 },
-                1024: { slidesPerView: 6, spaceBetween: 50 },
+                640: { slidesPerView: 4, spaceBetween: 30 },
+                768: { slidesPerView: 5, spaceBetween: 40 },
+                1024: { slidesPerView: 7, spaceBetween: 50 },
             }
         });
 
@@ -590,22 +590,22 @@
                 delay: 3000,
                 disableOnInteraction: false,
             },
-            slidesPerView: 1,
+            slidesPerView: 2,
             spaceBetween: 10,
-            pagination: {
+             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
             },
             breakpoints: {
-                640: { slidesPerView: 2, spaceBetween: 20 },
-                1024: { slidesPerView: 3, spaceBetween: 30 },
+                640: { slidesPerView: 3, spaceBetween: 20 },
+                1024: { slidesPerView: 4, spaceBetween: 30 },
             }
         });
 
         var testimonialsSwiper = new Swiper('.testimonials-slider', {
             loop: true,
              autoplay: {
-                delay: 4000,
+                delay: 5000,
                 disableOnInteraction: false,
             },
             slidesPerView: 1,
@@ -655,7 +655,7 @@
             }
         }
 
-        function selectChoice(key, value) {
+        function selectChoice(key, value, event) {
             formData[key] = value;
             
             // Highlight selection
@@ -689,7 +689,6 @@
 
         // Initialize first step
         showStep(0);
-
 
     </script>
 
